@@ -1,4 +1,4 @@
-var edad, peso, altura, frecuencia, imc, frecmax;
+var edad, peso, altura, frecuencia, imc, frecmax, presArterial;
 var nombre ;
 var apellido;
 
@@ -13,7 +13,9 @@ peso = parseFloat(prompt("Ingresar peso del paciente:"));
 
 altura = parseFloat(prompt("Ingresar estatura del paciente:"));
 
-frecuencia = parseInt(prompt("Ingresar frecuencia actual del paciente:"));
+frecuencia = parseInt(prompt("Ingresar frecuencia actual del paciente:")); 
+
+presArterial = prompt("Ingresar presion arterial Asistolica / Diastolica:"); 
 
 document.write("<nav class='navbar bg-body-tertiary bg-dark'>");
 document.write("<div class='container-fluid'>");
@@ -90,13 +92,15 @@ else if(imc>=40){
     document.write("</div>");
 }
 
-document.write("<div class='col' style = 'border: 2px solid black;'>");
-document.write('<h3>Frecuencia Actual: <span style="font-size: 1em;">' + frecuencia + '</span></h3>');
-document.write("</div>");
-
 frecmax = 220 - edad;
 document.write("<div class='col' style = 'border: 2px solid black;'>");
+document.write('<h3>Frecuencia Actual: <span style="font-size: 1em;">' + frecuencia + '</span></h3>');
 document.write('<h3>Frecuencia Max: <span style="font-size: 1em;">' + frecmax + '</span></h3>');
+document.write("</div>");
+
+
+document.write("<div class='col' style = 'border: 2px solid black;'>");
+document.write('<h3>Presion Arterial del Paciente: <span style="font-size: 1em;">' + presArterial + '</span></h3>');
 document.write("</div>");
 
 document.write("</div>");
